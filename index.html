@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Semaglutide Nasal — 특허 기반 전수조사</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0d12;--sur:#111620;--sur2:#181f2e;--bdr:rgba(99,185,255,.12);--bdr2:rgba(99,185,255,.25);--acc:#63b9ff;--acc2:#a78bfa;--grn:#34d399;--amb:#fbbf24;--red:#f87171;--txt:#e8edf5;--txt2:#8899b4;--txt3:#4a5a72;--mono:'DM Mono',monospace;--disp:'Syne',sans-serif;--body:'DM Sans',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--txt);font-family:var(--body);font-size:15px;line-height:1.6;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(99,185,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(99,185,255,.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+header{padding:44px 0 32px;border-bottom:1px solid var(--bdr);margin-bottom:28px}
+.hdr{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.eyebrow{font-family:var(--mono);font-size:11px;color:var(--acc);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.eyebrow::before{content:'';width:20px;height:1px;background:var(--acc)}
+h1{font-family:var(--disp);font-size:clamp(24px,3.5vw,40px);font-weight:800;line-height:1.1;letter-spacing:-.02em;margin-bottom:8px}
+h1 span{color:var(--acc)}
+.sub{font-size:13px;color:var(--txt2);max-width:440px;line-height:1.7}
+.badge-live{display:flex;align-items:center;gap:6px;background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.25);border-radius:20px;padding:4px 12px;font-family:var(--mono);font-size:11px;color:var(--grn);letter-spacing:.06em}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--grn);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.ts-txt{font-family:var(--mono);font-size:11px;color:var(--txt3);margin-top:6px}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:28px}
+.stat{background:var(--sur);border:1px solid var(--bdr);border-radius:12px;padding:14px 16px;position:relative;overflow:hidden}
+.stat:hover{border-color:var(--bdr2)}
+.stat::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--acc),transparent);opacity:.5}
+.sn{font-family:var(--disp);font-size:24px;font-weight:700;color:var(--acc);line-height:1;margin-bottom:4px}
+.sl{font-size:11px;color:var(--txt2)}
+
+/* tabs */
+.tabs{display:flex;border-bottom:1px solid var(--bdr);margin-bottom:24px;flex-wrap:wrap;gap:0}
+.tbtn{font-family:var(--body);font-size:12px;font-weight:500;color:var(--txt3);background:none;border:none;border-bottom:2px solid transparent;padding:9px 14px;cursor:pointer;transition:color .2s,border-color .2s;white-space:nowrap;letter-spacing:.02em}
+.tbtn:hover{color:var(--txt2)}
+.tbtn.on{color:var(--acc);border-bottom-color:var(--acc)}
+.pane{display:none}.pane.on{display:block;animation:fi .25s ease}
+@keyframes fi{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+
+/* cards */
+.card{background:var(--sur);border:1px solid var(--bdr);border-radius:13px;padding:18px 20px;margin-bottom:10px;transition:border-color .2s}
+.card:hover{border-color:var(--bdr2)}
+.ca{border-left:3px solid var(--acc);border-radius:0 13px 13px 0}
+.cg{border-left:3px solid var(--grn);border-radius:0 13px 13px 0}
+.cam{border-left:3px solid var(--amb);border-radius:0 13px 13px 0}
+.cgr{border-left:3px solid var(--txt3);border-radius:0 13px 13px 0}
+.cp{border-left:3px solid var(--acc2);border-radius:0 13px 13px 0}
+.cr{border-left:3px solid var(--red);border-radius:0 13px 13px 0}
+
+.ch{display:flex;align-items:flex-start;gap:11px;margin-bottom:9px}
+.ico{width:36px;height:36px;border-radius:8px;background:var(--sur2);border:1px solid var(--bdr);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.ctg{flex:1}
+.ctitle{font-family:var(--disp);font-size:14px;font-weight:700;color:var(--txt);margin-bottom:4px;line-height:1.3}
+.ctitle a{color:inherit;text-decoration:none}
+.ctitle a:hover{color:var(--acc)}
+.br{display:flex;flex-wrap:wrap;gap:4px}
+.b{font-family:var(--mono);font-size:10px;padding:2px 7px;border-radius:20px;font-weight:500;letter-spacing:.03em;white-space:nowrap}
+.bb{background:rgba(99,185,255,.12);color:var(--acc);border:1px solid rgba(99,185,255,.2)}
+.bg{background:rgba(52,211,153,.12);color:var(--grn);border:1px solid rgba(52,211,153,.2)}
+.ba{background:rgba(251,191,36,.12);color:var(--amb);border:1px solid rgba(251,191,36,.2)}
+.bgr{background:rgba(74,90,114,.3);color:var(--txt2);border:1px solid rgba(74,90,114,.35)}
+.bp{background:rgba(167,139,250,.12);color:var(--acc2);border:1px solid rgba(167,139,250,.2)}
+.br2{background:rgba(248,113,113,.12);color:var(--red);border:1px solid rgba(248,113,113,.2)}
+
+.cbody{font-size:13px;color:var(--txt2);line-height:1.75}
+.cbody strong{color:var(--txt);font-weight:500}
+.hbox{background:var(--sur2);border:1px solid var(--bdr);border-radius:8px;padding:11px 13px;font-size:12px;color:var(--txt2);line-height:1.8;margin-top:9px}
+.hbox strong{color:var(--acc);font-weight:500}
+.tl{margin-top:12px;padding-left:4px}
+.tli{position:relative;padding:4px 0 4px 20px;border-left:1px solid var(--bdr2);font-size:12px;color:var(--txt2);line-height:1.6}
+.tli::before{content:'';position:absolute;left:-4px;top:10px;width:7px;height:7px;border-radius:50%;background:var(--txt3);border:1px solid var(--bdr2)}
+.tli.d::before{background:var(--grn);border-color:var(--grn)}
+.tli.n::before{background:var(--amb);border-color:var(--amb)}
+.td{font-family:var(--mono);font-size:10px;color:var(--acc);letter-spacing:.04em;display:block;margin-bottom:1px}
+.tli.d .td{color:var(--grn)}.tli.n .td{color:var(--amb)}
+
+.stitle{font-family:var(--mono);font-size:10px;color:var(--txt3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.stitle::after{content:'';flex:1;height:1px;background:var(--bdr)}
+.abox{background:rgba(99,185,255,.06);border:1px solid rgba(99,185,255,.18);border-radius:8px;padding:11px 14px;font-size:12px;color:var(--txt2);line-height:1.7;margin-bottom:16px}
+.abox strong{color:var(--acc);font-weight:500}
+.lbtn{display:inline-flex;align-items:center;gap:4px;background:var(--sur2);border:1px solid var(--bdr);border-radius:6px;padding:5px 11px;font-size:11px;font-family:var(--body);color:var(--txt2);text-decoration:none;transition:color .15s,border-color .15s;white-space:nowrap}
+.lbtn:hover{color:var(--acc);border-color:var(--bdr2)}
+.lr{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:580px){.g2{grid-template-columns:1fr}}
+
+/* patent table */
+.ptbl{width:100%;border-collapse:collapse;font-size:12px;min-width:680px}
+.ptbl th{text-align:left;padding:7px 10px;border-bottom:1px solid var(--bdr2);font-family:var(--mono);font-size:10px;color:var(--txt3);font-weight:400;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.ptbl td{padding:9px 10px;border-bottom:1px solid var(--bdr);font-size:12px;vertical-align:top}
+.ptbl tr:hover td{background:rgba(99,185,255,.03)}
+.ptbl tr:last-child td{border-bottom:none}
+.tbl-wrap{overflow-x:auto}
+.conf{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px;vertical-align:middle}
+.conf-h{background:var(--grn)}
+.conf-m{background:var(--amb)}
+.conf-l{background:var(--txt3)}
+
+/* pros/cons */
+.pc{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+@media(max-width:500px){.pc{grid-template-columns:1fr}}
+.pb{background:rgba(52,211,153,.07);border:1px solid rgba(52,211,153,.15);border-radius:8px;padding:11px 13px}
+.pb h4{font-size:10px;color:var(--grn);font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;margin-bottom:7px}
+.pb li,.cb2 li{font-size:12px;list-style:none;padding-left:13px;position:relative;margin-bottom:5px;line-height:1.5}
+.pb li::before{content:'↗';position:absolute;left:0;color:var(--grn);font-size:10px}
+.cb2{background:rgba(251,191,36,.07);border:1px solid rgba(251,191,36,.15);border-radius:8px;padding:11px 13px}
+.cb2 h4{font-size:10px;color:var(--amb);font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;margin-bottom:7px}
+.cb2 li::before{content:'→';position:absolute;left:0;color:var(--amb);font-size:10px}
+
+footer{margin-top:44px;padding:22px 0;border-top:1px solid var(--bdr);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.ft{font-size:11px;color:var(--txt3);font-family:var(--mono)}
+.fl{display:flex;gap:14px}
+.fl a{font-size:11px;color:var(--txt3);text-decoration:none;transition:color .15s}
+.fl a:hover{color:var(--acc)}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--sur2);border-radius:3px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="hdr">
+    <div>
+      <div class="eyebrow">Patent Intelligence · Global Tracker</div>
+      <h1>Semaglutide<br><span>Nasal Spray</span></h1>
+      <p class="sub">Google Patents · Espacenet · WIPO PatentScope · Justia Patents<br>특허 데이터베이스 전수조사 기반 개발사 현황 (2026년 4월)</p>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px;padding-top:6px">
+      <div class="badge-live"><div class="dot"></div>PATENT-BASED</div>
+      <div class="ts-txt" id="ts">2026-04-16 기준</div>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="stat"><div class="sn">7+</div><div class="sl">글로벌 개발사</div></div>
+  <div class="stat"><div class="sn">1건</div><div class="sl">확인된 임상시험</div></div>
+  <div class="stat"><div class="sn">12+</div><div class="sl">관련 특허 패밀리</div></div>
+  <div class="stat"><div class="sn">5개국</div><div class="sl">중·홍콩·스웨덴·스위스·오스트리아</div></div>
+  <div class="stat"><div class="sn">2019~</div><div class="sl">최초 특허 출원 시점</div></div>
+  <div class="stat"><div class="sn">0</div><div class="sl">FDA/EMA 승인</div></div>
+</div>
+
+<div class="tabs">
+  <button class="tbtn on" onclick="sw('patents',this)">특허 마스터 테이블</button>
+  <button class="tbtn" onclick="sw('all',this)">개발사 상세 (8곳)</button>
+  <button class="tbtn" onclick="sw('clinical',this)">임상 진입</button>
+  <button class="tbtn" onclick="sw('science',this)">기술 비교</button>
+  <button class="tbtn" onclick="sw('links',this)">직접 조회 링크</button>
+</div>
+
+<!-- ══ 특허 마스터 테이블 ══ -->
+<div id="pane-patents" class="pane on">
+  <div class="abox">
+    <strong>조사 방법:</strong> Google Patents, Espacenet, WIPO PatentScope, Justia Patents에서 "semaglutide nasal", "semaglutide intranasal", "semaglutide inhalation spray" 키워드로 검색. 세마글루타이드를 단순 언급하거나 다른 약물과 혼용된 특허는 제외. 비강 투여에 특화된 제형 특허만 포함.
+    <br><span style="color:var(--grn)">●</span> 높은 신뢰도 (특허+임상 또는 공식 발표) &nbsp;
+    <span style="color:var(--amb)">●</span> 중간 신뢰도 (특허만 확인) &nbsp;
+    <span style="color:var(--txt3)">●</span> 낮은 신뢰도 (언급/간접 확인)
+  </div>
+  <div class="tbl-wrap">
+  <table class="ptbl">
+    <thead>
+      <tr>
+        <th>신뢰도</th>
+        <th>출원사</th>
+        <th>국가</th>
+        <th>특허번호</th>
+        <th>출원일</th>
+        <th>공개일</th>
+        <th>상태</th>
+        <th>핵심 기술</th>
+        <th>링크</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="conf conf-h"></span>높음</td>
+        <td><strong style="color:var(--txt)">Pentide Therapeutics Ltd</strong><br><span style="color:var(--txt3)">홍콩</span></td>
+        <td>🇭🇰</td>
+        <td><span class="b bb">US 2025/0205311 A1</span><br><span class="b bgr">WO2023209662A1</span></td>
+        <td>2023.04.28</td>
+        <td>2025.06.26</td>
+        <td><span class="b ba">심사중</span></td>
+        <td>CPPs + TJ 조절 + 점막부착 3중 조합. 비글견 AUC 7.7배 (vs 경구)</td>
+        <td><a class="lbtn" href="https://patents.google.com/patent/WO2023209662A1/en" target="_blank">Google Patents ↗</a></td>
+      </tr>
+      <tr>
+        <td><span class="conf conf-h"></span>높음</td>
+        <td><strong style="color:var(--txt)">Qilu Pharmaceutical</strong><br><span style="color:var(--txt3)">중국 산동</span></td>
+        <td>🇨🇳</td>
+        <td><span class="b bb">US 20240180823 A1</span><br><span class="b bgr">CN116763763B</span></td>
+        <td>2022.12.05 (CN)<br>2023.12.01 (US)</td>
+        <td>2024.06.06 (US)<br>2023.09.19 (CN)</td>
+        <td><span class="b bg">CN 등록완료</span><br><span class="b ba">US 심사중</span></td>
+        <td>흡입 스프레이. 5μm 이하 미세입자(≥10%). Tween 80 + Na deoxycholate 흡수촉진</td>
+        <td><a class="lbtn" href="https://patents.justia.com/patent/20240180823" target="_blank">Justia ↗</a><br><a class="lbtn" href="https://patents.google.com/patent/CN116763763B/en" target="_blank">Google ↗</a></td>
+      </tr>
+      <tr>
+        <td><span class="conf conf-h"></span>높음</td>
+        <td>
+          <strong style="color:var(--txt)">Shanghai Shiling Pharma</strong><br>
+          <span style="color:var(--txt3)">중국 상하이 (시험약 개발)</span><br>
+          <span style="color:var(--txt3);font-size:11px">+ World Leader Pharma</span><br>
+          <span style="color:var(--txt3);font-size:11px">(임상 스폰서, 世领制药)</span>
+        </td>
+        <td>🇨🇳</td>
+        <td>
+          <span class="b bgr">특허: 중·미·유럽·동남아</span><br>
+          <span class="b bb">CDE 승인 2026.01 (Shiling)</span><br>
+          <span class="b bb">NCT07465965 (World Leader)</span>
+        </td>
+        <td>미공개 (특허)<br>2026.03.06 (CT)</td>
+        <td>2026.01 (CDE)<br>2026.03 (CT)</td>
+        <td><span class="b bb">Phase 1 진행중</span><br><span style="color:var(--amb);font-size:11px">⚠️ 동일 임상 가능성</span></td>
+        <td>WL1006. 뮤코살 플랫폼. 2028 완료 목표.<br><strong style="color:var(--amb)">Synapse DB: WL1006을 Shiling 약물로 분류 → 두 회사는 동일 임상 공동 주체로 추정</strong></td>
+        <td>
+          <a class="lbtn" href="https://clinicaltrials.gov/study/NCT07465965" target="_blank">ClinicalTrials ↗</a><br>
+          <a class="lbtn" href="https://finance.yahoo.com/news/china-biotech-aims-finish-trials-080336240.html" target="_blank">Reuters ↗</a>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="conf conf-h"></span>높음</td>
+        <td><strong style="color:var(--txt)">MetP Pharma AG</strong><br><span style="color:var(--txt3)">스위스</span></td>
+        <td>🇨🇭</td>
+        <td><span class="b bb">특허 포트폴리오 2037~2039</span><br><span class="b bgr">BrainDos™ (다수)</span></td>
+        <td>다수 (플랫폼 특허)</td>
+        <td>지속 출원</td>
+        <td><span class="b bp">전임상 완료</span></td>
+        <td>올레오젤 기반 N2B. Brain-to-Plasma ratio &gt;1 달성 (2025 전임상)</td>
+        <td><a class="lbtn" href="https://mattern-pharma.com/" target="_blank">공식 사이트 ↗</a></td>
+      </tr>
+      <tr>
+        <td><span class="conf conf-m"></span>중간</td>
+        <td><strong style="color:var(--txt)">Iconovo AB</strong><br><span style="color:var(--txt3)">스웨덴 룬드</span></td>
+        <td>🇸🇪</td>
+        <td><span class="b ba">특허 출원 (2024.05)</span><br><span class="b bgr">GLP-1 흡입 제품군</span></td>
+        <td>2024.05 (출원)</td>
+        <td>미공개</td>
+        <td><span class="b ba">전임상 POC 진행</span></td>
+        <td>ICOone Nasal® 건조분말 흡입기. 흡기 구동 1회용. 505(b)(2) 경로</td>
+        <td><a class="lbtn" href="https://www.iconovo.se" target="_blank">공식 사이트 ↗</a></td>
+      </tr>
+      <tr>
+        <td><span class="conf conf-m"></span>중간</td>
+        <td><strong style="color:var(--txt)">Orexo AB</strong><br><span style="color:var(--txt3)">스웨덴 웁살라</span></td>
+        <td>🇸🇪</td>
+        <td><span class="b ba">AmorphOX® 다수 특허</span><br><span class="b bgr">OX472 프로그램</span></td>
+        <td>다수 (플랫폼 특허)</td>
+        <td>지속 출원</td>
+        <td><span class="b ba">전임상 PK 완료</span></td>
+        <td>AmorphOX® 무정형 분말. 경구 대비 7배 혈중농도 (2025 전임상)</td>
+        <td><a class="lbtn" href="https://www.orexo.com" target="_blank">공식 사이트 ↗</a></td>
+      </tr>
+      <tr>
+        <td><span class="conf conf-m"></span>중간</td>
+        <td><strong style="color:var(--txt)">Cyprumed GmbH</strong><br><span style="color:var(--txt3)">오스트리아</span></td>
+        <td>🇦🇹</td>
+        <td><span class="b bgr">WO2019193204A1</span><br><span class="b bgr">US20210087250A1</span></td>
+        <td>2019.04.08</td>
+        <td>2019.10.10</td>
+        <td><span class="b br2">Ceased (만료)</span></td>
+        <td>점막 투과용 아르기닌/라이신 기반 제형. 세마글루타이드 포함 GLP-1 계열 적용. ⚠️ 특허 법적 지위 Ceased</td>
+        <td><a class="lbtn" href="https://patents.google.com/patent/WO2019193204A1/en" target="_blank">Google Patents ↗</a></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div style="margin-top:18px;padding:12px 14px;background:var(--sur2);border-radius:8px;font-size:12px;color:var(--txt2)">
+    <strong style="color:var(--txt);font-weight:500">조사 한계 및 주의사항:</strong><br>
+    · 중국 CNIPA(국가지식재산권국) 특허는 구글 패밀리 매핑에서 누락되는 경우 있음 — 직접 조회 권장<br>
+    · MetP Pharma, Iconovo, Orexo의 플랫폼 특허는 세마글루타이드 전용이 아닌 광범위 적용 특허<br>
+    · Shiling의 개별 특허 번호는 미공개 상태 (CDE 출원 기반 확인)<br>
+    · "Ceased" 상태인 Cyprumed 특허는 기술 참조용으로만 포함
+  </div>
+</div>
+
+<!-- ══ 개발사 상세 ══ -->
+<div id="pane-all" class="pane">
+  <div class="abox"><strong>2026년 4월 기준 7개 독립 주체 확인.</strong> Shiling과 World Leader는 동일 임상(WL1006) 공동 주체로 통합 처리. Cyprumed(오스트리아)는 특허 Ceased로 현재 활동 불명확.</div>
+
+  <div class="stitle">임상 진입 확인 (Phase 1)</div>
+
+  <div class="card ca">
+    <div class="ch"><div class="ico">🇨🇳</div><div class="ctg">
+      <div class="ctitle">Shanghai Shiling Pharmaceutical × World Leader Pharmaceutical</div>
+      <div class="br">
+        <span class="b bb">Phase 1 진행중</span>
+        <span class="b bg">CDE 승인 2026.01 (Shiling)</span>
+        <span class="b bg">NCT07465965 (World Leader)</span>
+        <span class="b ba">⚠️ 동일 임상 주체 추정</span>
+      </div>
+    </div></div>
+    <div class="cbody">
+      ClinicalTrials.gov 스폰서는 <strong>Shanghai World Leader Pharmaceutical</strong>(世领制药, WL1006),
+      Synapse(Patsnap) 데이터베이스는 동일 WL1006 임상을 <strong>Shanghai Shiling</strong>(施灵) 약물로 분류.
+      두 회사는 별개 법인이나 <strong>같은 임상의 공동 주체(개발사 + 스폰서 분리 구조)</strong>로 추정됩니다.
+      확인 전까지 임상 1건으로 처리합니다.
+    </div>
+    <div class="hbox">
+      <strong>Shiling 측:</strong> 2026.01.12 중국 CDE 임상 승인 (Class 2.2) · 2028 글로벌 완료 목표 · 중·미·유럽·동남아 특허 보유<br>
+      <strong>World Leader 측:</strong> NCT07465965 (2026.03.06 등록) · WL1006 · n=60 · BMI 27~35 · 18~65세 · 단회투여 PK<br>
+      <strong>Synapse 분류:</strong> "Semaglutide (Shanghai Shiling)" 약물 항목에 WL1006 임상 수록 → 연관 확인
+    </div>
+    <div class="lr">
+      <a class="lbtn" href="https://clinicaltrials.gov/study/NCT07465965" target="_blank">ClinicalTrials NCT07465965 ↗</a>
+      <a class="lbtn" href="https://finance.yahoo.com/news/china-biotech-aims-finish-trials-080336240.html" target="_blank">Reuters — Shiling ↗</a>
+      <a class="lbtn" href="https://synapse.patsnap.com/drug/651ccae4fcc64a1c90525ee430c27fcb" target="_blank">Synapse DB ↗</a>
+    </div>
+  </div>
+
+  <div class="stitle" style="margin-top:20px">전임상 / 특허 보유 단계</div>
+
+  <div class="card" style="border-left:3px solid var(--acc2);border-radius:0 13px 13px 0">
+    <div class="ch"><div class="ico">🇭🇰</div><div class="ctg">
+      <div class="ctitle"><a href="https://patents.google.com/patent/WO2023209662A1/en" target="_blank">Pentide Therapeutics Limited — US 2025/0205311 A1 ↗</a></div>
+      <div class="br"><span class="b bp">미국 특허 출원 공개</span><span class="b bg">비글견 PK 7.7배↑</span><span class="b ba">전임상 3종 완료</span></div>
+    </div></div>
+    <div class="cbody"><strong>가장 체계적인 전임상 데이터</strong> 보유. 쥐·토끼·비글견 3종 PK/PD. PCT 출원(2023) → 미국·유럽·중국·캐나다·호주 다국 진입.</div>
+    <div class="hbox">
+      <strong>비글견 PK (PT-N06 vs Rybelsus 동일 7mg):</strong> Cmax 6배↑ · AUC 7.7배↑<br>
+      <strong>토끼 PD (PT-N04):</strong> 체중 Day2 15%↓ · 식이 70%↓ (피하주사 동등)<br>
+      <strong>기술:</strong> CPPs (Penetratin 등) + 밀착연접 조절(DPC, 사이클로덱스트린, EDTA) + 점막부착 고분자<br>
+      <strong>목표:</strong> 경구 7~14mg/일 → 비강 8~10mg/<strong>주</strong> (7~14배 빈도 감소)
+    </div>
+    <div class="tl">
+      <div class="tli d"><span class="td">2022.04.29</span>미국 가출원</div>
+      <div class="tli d"><span class="td">2023.04.28</span>PCT 국제 출원 (PCT/IB2023/054435)</div>
+      <div class="tli d"><span class="td">2024.09.20</span>미국 국내 단계 진입</div>
+      <div class="tli d"><span class="td">2025.06.26</span>미국 특허 공개 (US 2025/0205311 A1)</div>
+      <div class="tli n"><span class="td">진행중</span>특허 심사 · 임상 시점 미발표</div>
+    </div>
+    <div class="lr"><a class="lbtn" href="https://patents.google.com/patent/WO2023209662A1/en" target="_blank">Google Patents ↗</a></div>
+  </div>
+
+  <div class="card cp">
+    <div class="ch"><div class="ico">🇨🇭</div><div class="ctg">
+      <div class="ctitle"><a href="https://mattern-pharma.com/" target="_blank">MetP Pharma AG — BrainDos™ ↗</a></div>
+      <div class="br"><span class="b bp">전임상 다수 완료</span><span class="b bp">Brain-to-Plasma&gt;1</span><span class="b bgr">특허 2037~2039</span></div>
+    </div></div>
+    <div class="cbody">스위스 독립 R&D사. 뇌 직접 표적(N2B) 특화. 올레오젤 기반 BrainDos™. 세마·티르제파타이드 모두 개발 중. 파트너 적극 모색.</div>
+    <div class="hbox">2025 전임상: Brain-to-plasma &gt;1 달성 — 피하·경구·기존 비강 모두 불가능한 수치. 뇌에 세마글루타이드 능동 축적. GI 부작용 최소화 가능성.</div>
+    <div class="lr"><a class="lbtn" href="https://mattern-pharma.com/" target="_blank">공식 사이트 ↗</a><a class="lbtn" href="https://www.pharmafocuseurope.com/pressreleases/metp-pharmas-enabling-technology-creates-new-brain-targeted" target="_blank">Brain-targeted 발표 ↗</a></div>
+  </div>
+
+  <div class="card cam">
+    <div class="ch"><div class="ico">🇸🇪</div><div class="ctg">
+      <div class="ctitle"><a href="https://www.prnewswire.com/news-releases/orexos-amorphox-technology-may-pave-the-way-for-intranasal-glp-1-medication-302547667.html" target="_blank">Orexo AB — OX472 / AmorphOX® ↗</a></div>
+      <div class="br"><span class="b ba">전임상 PK 완료</span><span class="b ba">경구 대비 7배</span><span class="b bgr">STO:ORX 상장</span></div>
+    </div></div>
+    <div class="cbody">스웨덴 나스닥 상장. AmorphOX® 무정형 분말 플랫폼. 2025.09 전임상 PK 발표: Rybelsus 대비 7배 혈중농도. 냉장 불필요.</div>
+    <div class="lr"><a class="lbtn" href="https://www.prnewswire.com/news-releases/orexos-amorphox-technology-may-pave-the-way-for-intranasal-glp-1-medication-302547667.html" target="_blank">PR Newswire ↗</a></div>
+  </div>
+
+  <div class="card cam">
+    <div class="ch"><div class="ico">🇸🇪</div><div class="ctg">
+      <div class="ctitle"><a href="https://www.iconovo.se" target="_blank">Iconovo AB — ICOone Nasal® ↗</a></div>
+      <div class="br"><span class="b ba">전임상 POC 진행</span><span class="b bp">라이선스 모색</span><span class="b bgr">특허 출원 2024.05</span></div>
+    </div></div>
+    <div class="cbody">스웨덴 상장. 흡기 구동 1회용 분말 비강 흡입기. 전임상 POC 후 파트너 계약 → 임상 전략.</div>
+    <div class="lr"><a class="lbtn" href="https://www.iconovo.se" target="_blank">공식 사이트 ↗</a><a class="lbtn" href="https://biostock.se/en/2024/09/the-future-of-obesity-treatment-iconovo-develops-intranasal-semaglutide/" target="_blank">CEO 인터뷰 ↗</a></div>
+  </div>
+
+  <div class="card cgr">
+    <div class="ch"><div class="ico">🇨🇳</div><div class="ctg">
+      <div class="ctitle"><a href="https://patents.justia.com/patent/20240180823" target="_blank">Qilu Pharmaceutical — CN116763763B + US20240180823 ↗</a></div>
+      <div class="br"><span class="b bg">CN 특허 등록</span><span class="b ba">US 심사중</span></div>
+    </div></div>
+    <div class="cbody">중국 대형 제약사. 2022 중국 특허 등록 + 2023 미국 진입. 5μm 이하 미세입자 + 흡수촉진제. 폐 침착 최대화 설계. 임상 개시 발표 없음.</div>
+    <div class="lr"><a class="lbtn" href="https://patents.justia.com/patent/20240180823" target="_blank">Justia US ↗</a><a class="lbtn" href="https://patents.google.com/patent/CN116763763B/en" target="_blank">Google CN ↗</a></div>
+  </div>
+
+  <div class="card cr">
+    <div class="ch"><div class="ico">🇦🇹</div><div class="ctg">
+      <div class="ctitle"><a href="https://patents.google.com/patent/WO2019193204A1/en" target="_blank">Cyprumed GmbH — WO2019193204A1 ↗</a></div>
+      <div class="br"><span class="b br2">특허 Ceased</span><span class="b bgr">오스트리아 약물전달 전문사</span></div>
+    </div></div>
+    <div class="cbody">오스트리아 비침습 biologics 전달 전문사. 2019년 PCT 출원. 아르기닌/라이신 기반 점막 투과 제형에 세마글루타이드 포함. <strong>⚠️ 특허 법적 지위 "Ceased"</strong> — 현재 활동 불명확. 기술 참조 가치는 있음.</div>
+    <div class="lr"><a class="lbtn" href="https://patents.google.com/patent/WO2019193204A1/en" target="_blank">Google Patents ↗</a><a class="lbtn" href="https://www.cyprumed.net/" target="_blank">Cyprumed 사이트 ↗</a></div>
+  </div>
+</div>
+
+<!-- ══ 임상 ══ -->
+<div id="pane-clinical" class="pane">
+  <div class="abox">
+    <strong>⚠️ 주의:</strong> ClinicalTrials.gov 등록(NCT07465965) 스폰서는 <strong>Shanghai World Leader Pharmaceutical</strong>이나,
+    Synapse DB는 동일 WL1006을 <strong>Shanghai Shiling</strong> 약물로 분류합니다.
+    두 회사는 별개 법인이지만 동일 임상의 공동 주체(개발사 + 스폰서 분리 구조)로 추정되며,
+    실질적으로는 임상 1건입니다. 확인 필요.
+  </div>
+
+  <div class="card ca">
+    <div class="ch"><div class="ico">📋</div><div class="ctg">
+      <div class="ctitle"><a href="https://clinicaltrials.gov/study/NCT07465965" target="_blank">NCT07465965 — WL1006 Phase 1 ↗</a></div>
+      <div class="br">
+        <span class="b bb">Phase 1</span>
+        <span class="b ba">Single-dose PK</span>
+        <span class="b bg">ClinicalTrials 등록</span>
+        <span class="b ba">⚠️ Shiling/World Leader 관계 불명확</span>
+      </div>
+    </div></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-top:10px">
+      <div><div style="font-family:var(--mono);font-size:10px;color:var(--txt3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px">CT 스폰서</div><div style="font-size:12px">Shanghai World Leader Pharmaceutical</div></div>
+      <div><div style="font-family:var(--mono);font-size:10px;color:var(--txt3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px">Synapse 분류</div><div style="font-size:12px">Shanghai Shiling 약물 (WL1006)</div></div>
+      <div><div style="font-family:var(--mono);font-size:10px;color:var(--txt3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px">약물코드</div><div style="font-size:12px">WL1006 / WL1006-US-I-01</div></div>
+      <div><div style="font-family:var(--mono);font-size:10px;color:var(--txt3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px">등록일</div><div style="font-size:12px">2026.03.06</div></div>
+      <div><div style="font-family:var(--mono);font-size:10px;color:var(--txt3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px">대상</div><div style="font-size:12px">BMI 27~35, 18~65세, n=60</div></div>
+      <div><div style="font-family:var(--mono);font-size:10px;color:var(--txt3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px">1차 지표</div><div style="font-size:12px">안전성·내약성·PK</div></div>
+    </div>
+    <div class="lr">
+      <a class="lbtn" href="https://clinicaltrials.gov/study/NCT07465965" target="_blank">ClinicalTrials ↗</a>
+      <a class="lbtn" href="https://synapse.patsnap.com/drug/651ccae4fcc64a1c90525ee430c27fcb" target="_blank">Synapse DB (Shiling 약물로 분류) ↗</a>
+      <a class="lbtn" href="https://clinicaltrials.gov/search?term=semaglutide+nasal+spray" target="_blank">전체 검색 ↗</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 기술 비교 ══ -->
+<div id="pane-science" class="pane">
+  <div class="card" style="overflow-x:auto">
+    <div style="font-family:var(--disp);font-size:14px;font-weight:700;margin-bottom:12px">8개사 기술 방식 비교</div>
+    <table class="ptbl">
+      <thead><tr><th>회사</th><th>제형 방식</th><th>핵심 기술</th><th>단계</th><th>N2B 목표</th><th>주요 데이터</th></tr></thead>
+      <tbody>
+        <tr><td>Shiling</td><td>뮤코살 점막</td><td>독자 플랫폼 (미공개)</td><td><span class="b bb">Phase 1</span></td><td>전신 흡수</td><td>CDE 승인 (임상 데이터 미공개)</td></tr>
+        <tr><td>World Leader</td><td>액상 스프레이</td><td>WL1006 (미공개)</td><td><span class="b bb">Phase 1</span></td><td>미공개</td><td>NCT07465965 등록</td></tr>
+        <tr><td><strong>Pentide</strong></td><td>액상 스프레이</td><td>CPP + TJ조절 + 점막부착 3중</td><td><span class="b bp">전임상↑</span></td><td>전신 흡수</td><td>비글견 AUC 7.7배↑, 토끼 PD</td></tr>
+        <tr><td><strong>MetP Pharma</strong></td><td>올레오젤</td><td>BrainDos™ (N2B 후각/삼차신경)</td><td><span class="b bp">전임상↑</span></td><td style="color:var(--grn)">✓ 핵심</td><td>Brain/Plasma &gt;1 (역대 최초)</td></tr>
+        <tr><td>Orexo</td><td>무정형 건조분말</td><td>AmorphOX® (고흡수 분말)</td><td><span class="b ba">전임상</span></td><td>부분적</td><td>경구 7배 흡수 (전임상)</td></tr>
+        <tr><td>Iconovo</td><td>건조분말 흡입기</td><td>ICOone Nasal® (흡기 구동)</td><td><span class="b ba">전임상</span></td><td>전신 흡수</td><td>POC 진행중 (미발표)</td></tr>
+        <tr><td>Qilu</td><td>흡입 스프레이</td><td>미세입자+흡수촉진제</td><td><span class="b bgr">특허만</span></td><td>폐 침착 목표</td><td>특허 명세서 데이터만</td></tr>
+        <tr><td>Cyprumed</td><td>액상 제형</td><td>Arg/Lys 기반 점막투과</td><td><span class="b br2">Ceased</span></td><td>전신 흡수</td><td>특허 만료 (참조만)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card" style="margin-top:12px">
+    <div style="font-family:var(--disp);font-size:14px;font-weight:700;margin-bottom:12px">비강 세마글루타이드 공통 과제</div>
+    <div class="pc">
+      <div class="pb"><h4>기술적 장점</h4><ul>
+        <li>주사 불필요 → 환자 순응도↑</li>
+        <li>간 초회통과 완전 회피</li>
+        <li>빠른 흡수 가능성</li>
+        <li>N2B → GI 부작용 감소 가능</li>
+        <li>냉장 불필요 (분말 제형)</li>
+        <li>투여 빈도 대폭 감소 목표</li>
+      </ul></div>
+      <div class="cb2"><h4>해결해야 할 과제</h4><ul>
+        <li>MW 4,113 Da → 비강 흡수 극히 어려움</li>
+        <li>비강 효소 분해 우려</li>
+        <li>정확한 용량 전달 어려움</li>
+        <li>흡수촉진제 → 점막 자극</li>
+        <li>장기 점막 안전성 미검증</li>
+        <li>EU/US 특허 2031년까지 분쟁 리스크</li>
+      </ul></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 링크 ══ -->
+<div id="pane-links" class="pane">
+  <div class="stitle">특허 데이터베이스 직접 검색</div>
+  <div class="card">
+    <div style="font-size:13px;color:var(--txt2);margin-bottom:10px">아래 링크에서 직접 "semaglutide nasal" 또는 "intranasal semaglutide"로 검색하면 최신 특허를 확인할 수 있습니다.</div>
+    <div class="lr">
+      <a class="lbtn" href="https://patents.google.com/?q=semaglutide+nasal+spray&before=priority:20260101&after=priority:20190101" target="_blank">Google Patents ↗</a>
+      <a class="lbtn" href="https://worldwide.espacenet.com/patent/search?q=semaglutide%20nasal" target="_blank">Espacenet (EPO) ↗</a>
+      <a class="lbtn" href="https://patentscope.wipo.int/search/en/result.jsf?query=semaglutide+nasal&office=&rss=false" target="_blank">WIPO PatentScope ↗</a>
+      <a class="lbtn" href="https://patents.justia.com/search?q=semaglutide+nasal+spray" target="_blank">Justia Patents ↗</a>
+      <a class="lbtn" href="https://www.drugpatentwatch.com/p/generic/semaglutide" target="_blank">DrugPatentWatch ↗</a>
+      <a class="lbtn" href="https://synapse.patsnap.com/drug/651ccae4fcc64a1c90525ee430c27fcb" target="_blank">Synapse (Patsnap) ↗</a>
+    </div>
+  </div>
+
+  <div class="stitle" style="margin-top:18px">임상시험 직접 조회</div>
+  <div class="card"><div class="lr">
+    <a class="lbtn" href="https://clinicaltrials.gov/study/NCT07465965" target="_blank">NCT07465965 (WL1006) ↗</a>
+    <a class="lbtn" href="https://clinicaltrials.gov/search?term=semaglutide+nasal+spray" target="_blank">Nasal Spray 검색 ↗</a>
+    <a class="lbtn" href="https://clinicaltrials.gov/search?term=intranasal+GLP-1" target="_blank">Intranasal GLP-1 ↗</a>
+  </div></div>
+
+  <div class="stitle" style="margin-top:18px">뉴스/미디어</div>
+  <div class="card"><div class="lr">
+    <a class="lbtn" href="https://news.google.com/search?q=semaglutide+nasal+spray+patent&hl=en" target="_blank">Google News ↗</a>
+    <a class="lbtn" href="https://finance.yahoo.com/news/china-biotech-aims-finish-trials-080336240.html" target="_blank">Reuters — Shiling ↗</a>
+    <a class="lbtn" href="https://www.pharmafocuseurope.com/pressreleases/metp-pharmas-enabling-technology-creates-new-brain-targeted" target="_blank">MetP Brain GLP-1 ↗</a>
+    <a class="lbtn" href="https://www.prnewswire.com/news-releases/orexos-amorphox-technology-may-pave-the-way-for-intranasal-glp-1-medication-302547667.html" target="_blank">Orexo PR ↗</a>
+    <a class="lbtn" href="https://pubmed.ncbi.nlm.nih.gov/?term=intranasal+semaglutide&sort=date" target="_blank">PubMed ↗</a>
+  </div></div>
+</div>
+
+<footer>
+  <div class="ft">SEMAGLUTIDE NASAL PATENT TRACKER · 2026-04-16 · 8개사 특허 전수조사</div>
+  <div class="fl">
+    <a href="https://patents.google.com/?q=semaglutide+nasal" target="_blank">Google Patents</a>
+    <a href="https://worldwide.espacenet.com/patent/search?q=semaglutide%20nasal" target="_blank">Espacenet</a>
+    <a href="https://clinicaltrials.gov/search?term=semaglutide+nasal" target="_blank">ClinicalTrials</a>
+  </div>
+</footer>
+</div>
+<script>
+function sw(id,btn){
+  document.querySelectorAll('.pane').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.tbtn').forEach(b=>b.classList.remove('on'));
+  document.getElementById('pane-'+id).classList.add('on');
+  btn.classList.add('on');
+}
+const d=new Date();
+document.getElementById('ts').textContent=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')+' 기준';
+</script>
+</body>
+</html>
